@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.83.1">
+  <title>NTUT Mask Notify</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <header class="p-3 bg-dark text-white border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <span class="fs-4">NTUT Mask Notify</span>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+        </form>
+
+
+        <!-- <div hidden id="user-pic"></div> -->
+        <!-- <img hidden id="user-pic" class="img-profile rounded-circle" width="30">
+        <div hidden id="user-name"></div>
+
+        <button hidden id="sign-out" class="btn btn-outline-light me-2">
+          Sign-out
+        </button> -->
+
+        <button hidden id="sign-in" class="btn btn-outline-light me-2">
+          <!-- <i class="bi bi-person-circle"></i> -->
+          <i class="material-icons">account_circle</i>Sign-in with Google
+        </button>
+
+        <div class="dropdown text-end">
+
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img hidden id="user-pic" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+            <li>
+              <p hidden id="user-name" style="text-align: center;"></p>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a hidden id="sign-out" class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+          <div class="col">
+            <div class="card">
+              <div class="card-header fw-bold text-white" style="background-color: #00c300;">
+                Line Notify Register
+              </div>
+              <div class="card-body">
+                <form id="register-form" action="#" onsubmit="return register(this);">
+                  <div class="form-floating mb-3">
+                    <input id="pi-id" class="form-control" id="floatingInput" placeholder="RPIxxx" required="required"
+                      aria-describedby="inputHelp" pattern="RPI[0-9]{3}" title="Please enter according to the prompt.">
+                    <label for="floatingInput">Raspberry ID</label>
+                    <div id="inputHelp" class="form-text">Please input raspberry id. ex: RPI001</div>
+                  </div>
+                  <button id="register-btn" type="submit" class="btn btn-primary">Register</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <table id='registry-table' class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Device</th>
+                  <th scope="col">Token</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Import and configure the Firebase SDK -->
+  <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+  <!-- If you do not want to serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+
+
+  <script src="/__/firebase/8.4.3/firebase-app.js"></script>
+  <script src="/__/firebase/8.4.3/firebase-auth.js"></script>
+  <script src="/__/firebase/8.4.3/firebase-storage.js"></script>
+  <script src="/__/firebase/8.4.3/firebase-messaging.js"></script>
+  <script src="/__/firebase/8.4.3/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="main.js"></script>
+
+
+</body>
+
+</html>
